@@ -42,7 +42,8 @@
   .opening-big { font-family: var(--serif); font-size: 4.5rem; font-weight: 300; color: #f5ede3; line-height: 1.05; margin-bottom: 28px; }
   .opening-big em { font-style: italic; color: #c4a060; }
   .opening-two { display: flex; align-items: center; justify-content: center; gap: 48px; }
-  .opening-dir { text-align: center; padding: 0 24px; }
+  .opening-dir { text-align: center; padding: 0 24px; text-decoration: none; cursor: pointer; transition: opacity 0.2s; }
+  .opening-dir:hover { opacity: 0.7; }
   .opening-dir-num { font-size: 0.6rem; letter-spacing: 4px; text-transform: uppercase; color: #6b5a48; margin-bottom: 10px; }
   .opening-dir-name-k1 { font-family: var(--bebas); font-size: 2rem; letter-spacing: 4px; color: #f0e6d8; }
   .opening-dir-name-k2 { font-family: var(--serif-display); font-size: 1.9rem; color: #7a8a6a; }
@@ -551,20 +552,20 @@
     <div class="opening-label">ROSOŁKI KOLAGENOWE</div>
     <h1 class="opening-big">Kierunki <em>kreatywne</em></h1>
     <div class="opening-two">
-      <div class="opening-dir">
+      <a class="opening-dir" href="#k1">
         <div class="opening-dir-num">Kierunek 01</div>
         <div class="opening-dir-name-k1">SIŁA Z KOŚCI</div>
-      </div>
+      </a>
       <div class="opening-sep"></div>
-      <div class="opening-dir">
+      <a class="opening-dir" href="#k2">
         <div class="opening-dir-num">Kierunek 02</div>
         <div class="opening-dir-name-k2">Naturalna Apteka</div>
-      </div>
+      </a>
       <div class="opening-sep"></div>
-      <div class="opening-dir">
+      <a class="opening-dir" href="#k3">
         <div class="opening-dir-num">Kierunek 03</div>
         <div class="opening-dir-name-k3">Rosołek</div>
-      </div>
+      </a>
     </div>
   </div>
 </section>
