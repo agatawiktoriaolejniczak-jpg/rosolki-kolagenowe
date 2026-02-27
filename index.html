@@ -1,0 +1,1022 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rosołki Kolagenowe — Kierunki kreatywne</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=Inter:wght@300;400;500;600;700&family=DM+Serif+Display:ital@0;1&family=Bebas+Neue&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --serif: 'Cormorant Garamond', Georgia, serif;
+    --serif-display: 'DM Serif Display', Georgia, serif;
+    --sans: 'Inter', system-ui, sans-serif;
+    --bebas: 'Bebas Neue', sans-serif;
+    --lora: 'Lora', Georgia, serif;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { font-family: var(--sans); background: #0d0a07; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+  .container { max-width: 1000px; margin: 0 auto; padding: 0 40px; }
+
+  /* ===== OPENING ===== */
+  .opening {
+    padding: 80px 0 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: #0d0a07;
+    position: relative;
+  }
+  .opening::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at 50% 50%, rgba(139,101,67,0.04) 0%, transparent 70%);
+  }
+  .opening-content { position: relative; z-index: 2; }
+  .opening-by { font-family: var(--sans); font-size: 0.6rem; letter-spacing: 3px; color: #5c4a38; margin-bottom: 24px; }
+  .opening-label { font-family: var(--sans); font-size: 0.7rem; font-weight: 600; letter-spacing: 8px; text-transform: uppercase; color: #c4a060; margin-bottom: 20px; }
+  .opening-big { font-family: var(--serif); font-size: 4.5rem; font-weight: 300; color: #f5ede3; line-height: 1.05; margin-bottom: 28px; }
+  .opening-big em { font-style: italic; color: #c4a060; }
+  .opening-two { display: flex; align-items: center; justify-content: center; gap: 48px; }
+  .opening-dir { text-align: center; padding: 0 24px; }
+  .opening-dir-num { font-size: 0.6rem; letter-spacing: 4px; text-transform: uppercase; color: #6b5a48; margin-bottom: 10px; }
+  .opening-dir-name-k1 { font-family: var(--bebas); font-size: 2rem; letter-spacing: 4px; color: #f0e6d8; }
+  .opening-dir-name-k2 { font-family: var(--serif-display); font-size: 1.9rem; color: #7a8a6a; }
+  .opening-dir-name-k3 { font-family: var(--lora); font-size: 1.9rem; font-weight: 600; color: #D8A43A; }
+  .opening-sep { width: 1px; height: 50px; background: rgba(196,160,96,0.2); }
+  .opening-scroll { position: absolute; bottom: 32px; left: 50%; transform: translateX(-50%); font-size: 0.55rem; letter-spacing: 4px; text-transform: uppercase; color: #3d2b1f; animation: float 2.5s ease-in-out infinite; }
+  @keyframes float {
+    0%,100% { opacity: 0.3; transform: translateX(-50%) translateY(0); }
+    50% { opacity: 1; transform: translateX(-50%) translateY(6px); }
+  }
+
+  .kierunek-label { font-family: var(--sans); font-size: 1rem; font-weight: 600; letter-spacing: 8px; text-transform: uppercase; margin-bottom: 14px; }
+
+  /* ============================================= */
+  /* ===== KIERUNEK 1 ============================ */
+  /* ============================================= */
+
+  /* K1 HERO — parujący garnek */
+  .k1-hero {
+    position: relative;
+    height: 90vh;
+    min-height: 550px;
+    display: flex;
+    align-items: flex-end;
+    overflow: hidden;
+  }
+  .k1-hero-bg {
+    position: absolute; inset: 0;
+    background: url('img/AdobeStock_169809158.jpeg') center/cover;
+  }
+  .k1-hero-bg::after {
+    content: ''; position: absolute; inset: 0;
+    background: linear-gradient(180deg, rgba(13,10,7,0.1) 0%, rgba(13,10,7,0.5) 50%, rgba(13,10,7,0.97) 88%, #0d0a07 100%);
+  }
+  .k1-hero-content { position: relative; z-index: 2; padding: 60px; max-width: 650px; }
+  .k1-hero-title { font-family: var(--bebas); font-size: 4.5rem; color: #f5ede3; line-height: 0.92; letter-spacing: 3px; margin-bottom: 12px; }
+  .k1-hero-tagline { font-family: var(--serif); font-size: 1.2rem; font-weight: 300; font-style: italic; color: #c4a060; }
+
+  /* K1 sections */
+  .k1-section { background: #0d0a07; padding: 44px 0; }
+  .k1-section + .k1-section { padding-top: 0; }
+  .k1-eyebrow { font-family: var(--sans); font-size: 0.55rem; letter-spacing: 4px; text-transform: uppercase; color: #8b6543; margin-bottom: 10px; }
+  .k1-heading { font-family: var(--bebas); font-size: 2rem; color: #f0e6d8; letter-spacing: 2px; margin-bottom: 6px; }
+  .k1-lead { font-family: var(--serif); font-size: 1.05rem; font-weight: 300; font-style: italic; color: #8a7560; max-width: 540px; line-height: 1.5; margin-bottom: 32px; }
+
+  /* K1 IDEA — zdjęcie + tekst */
+  .k1-idea-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0; border-radius: 10px; overflow: hidden; }
+  .k1-idea-img { min-height: 400px; background-size: cover; background-position: center; }
+  .k1-idea-video { min-height: 400px; position: relative; overflow: hidden; }
+  .k1-idea-video video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+  .k1-idea-text { background: #141010; padding: 44px 40px; display: flex; flex-direction: column; justify-content: center; }
+  .k1-idea-text p { font-family: var(--serif); font-size: 1.2rem; font-weight: 300; color: #c4a882; line-height: 1.6; margin-bottom: 16px; }
+  .k1-idea-text .strong { font-family: var(--bebas); font-size: 1.5rem; color: #f0e6d8; letter-spacing: 2px; }
+
+  /* Emotions */
+  .k1-emotions { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 20px; }
+  .k1-emotion { padding: 6px 16px; border: 1px solid rgba(196,160,96,0.2); border-radius: 30px; font-size: 0.75rem; color: #c4a060; }
+
+  /* ===== K1 MOODBOARD — masonry grid ===== */
+  .k1-mood-grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-auto-rows: 80px;
+    gap: 8px;
+  }
+  .k1-mood-item {
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+  }
+  .k1-mood-item::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, transparent 65%, rgba(13,10,7,0.6) 100%);
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  .k1-mood-item:hover::after { opacity: 1; }
+  .k1-mood-label {
+    position: absolute;
+    bottom: 10px;
+    left: 12px;
+    z-index: 2;
+    font-size: 0.55rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #c4a060;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  .k1-mood-item:hover .k1-mood-label { opacity: 1; }
+
+  /* Grid placement */
+  .km-1 { grid-column: 1 / 8; grid-row: 1 / 6; }    /* duży lewy — flat lay z kośćmi */
+  .km-2 { grid-column: 8 / 13; grid-row: 1 / 4; }    /* prawy góra — kubek bulion */
+  .km-3 { grid-column: 8 / 13; grid-row: 4 / 6; }    /* prawy dół — słoiki bulion */
+  .km-4 { grid-column: 1 / 5; grid-row: 6 / 9; }     /* lewy dół — kość w garnku */
+  .km-5 { grid-column: 5 / 9; grid-row: 6 / 9; }     /* środek dół — rosół z kośćmi */
+  .km-6 { grid-column: 9 / 13; grid-row: 6 / 9; }    /* prawy dół — mięso w sosie */
+
+  /* K1 palette */
+  .k1-palette { display: flex; gap: 3px; margin: 24px 0 32px; }
+  .k1-swatch { flex: 1; height: 56px; border-radius: 6px; position: relative; }
+  .k1-swatch span { position: absolute; bottom: -18px; left: 0; font-size: 0.55rem; color: #5c4a38; }
+
+  /* K1 names */
+  .k1-names { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-bottom: 20px; }
+  .k1-name { background: #141010; border: 1px solid rgba(139,101,67,0.12); border-radius: 10px; padding: 20px 16px; text-align: center; transition: border-color 0.3s; }
+  .k1-name:hover { border-color: #c4a060; }
+  .k1-name.feat { border-color: #c4a060; background: linear-gradient(180deg, #1a1510, #141010); }
+  .k1-name-main { font-family: var(--bebas); font-size: 1.3rem; color: #f0e6d8; letter-spacing: 2px; margin-bottom: 3px; }
+  .k1-name-sub { font-family: var(--serif); font-size: 0.8rem; font-style: italic; color: #8a7560; }
+
+  /* K1 claims */
+  .k1-claims { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+  .k1-claim { background: #141010; border-left: 2px solid #c4a060; padding: 18px 22px; border-radius: 0 8px 8px 0; }
+  .k1-claim p { font-family: var(--serif); font-size: 1.05rem; font-style: italic; color: #c4a882; }
+
+  /* ===== K1 JAR MOCKUPS ===== */
+  /* — Packaging mockup images — */
+  .k1-packaging-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-top: 24px;
+  }
+  .k1-packaging-img {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 12px 40px rgba(0,0,0,0.3);
+  }
+  .k1-packaging-img img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  /* ===== DIVIDER ===== */
+  .divider {
+    background: #0d0a07;
+    padding: 28px 40px;
+    text-align: center;
+    border-top: 1px solid rgba(196,160,96,0.08);
+    border-bottom: 1px solid rgba(196,160,96,0.08);
+  }
+  .divider-text { font-size: 0.6rem; letter-spacing: 5px; text-transform: uppercase; color: #5c4a38; }
+
+  /* ============================================= */
+  /* ===== KIERUNEK 2 ============================ */
+  /* ============================================= */
+
+  .k2-hero {
+    position: relative;
+    height: 90vh;
+    min-height: 550px;
+    display: flex;
+    align-items: flex-end;
+    overflow: hidden;
+  }
+  .k2-hero-bg {
+    position: absolute; inset: 0;
+    background: url('img/AdobeStock_1773213389.jpeg') center/cover;
+  }
+  .k2-hero-bg::after {
+    content: ''; position: absolute; inset: 0;
+    background: linear-gradient(180deg, rgba(250,247,242,0.0) 0%, rgba(250,247,242,0.5) 50%, rgba(250,247,242,0.97) 85%, #faf7f2 100%);
+  }
+  .k2-hero-content { position: relative; z-index: 2; padding: 60px; max-width: 650px; }
+  .k2-hero-title { font-family: var(--serif-display); font-size: 3.8rem; color: #3d4a35; line-height: 1.05; margin-bottom: 12px; }
+  .k2-hero-tagline { font-family: var(--serif); font-size: 1.2rem; font-weight: 300; font-style: italic; color: #7a8a6a; }
+
+  .k2-section { background: #faf7f2; padding: 44px 0; }
+  .k2-section + .k2-section { padding-top: 0; }
+  .k2-eyebrow { font-size: 0.55rem; letter-spacing: 4px; text-transform: uppercase; color: #7a8a6a; margin-bottom: 10px; }
+  .k2-heading { font-family: var(--serif-display); font-size: 1.8rem; color: #3d4a35; margin-bottom: 6px; }
+  .k2-lead { font-family: var(--serif); font-size: 1.05rem; font-weight: 300; font-style: italic; color: #7a8a6a; max-width: 540px; line-height: 1.5; margin-bottom: 32px; }
+
+  .k2-idea-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0; border-radius: 10px; overflow: hidden; box-shadow: 0 4px 40px rgba(60,80,40,0.06); }
+  .k2-idea-video { min-height: 400px; position: relative; overflow: hidden; }
+  .k2-idea-video video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+  .k2-idea-text { background: #fff; padding: 44px 40px; display: flex; flex-direction: column; justify-content: center; }
+  .k2-idea-text p { font-family: var(--serif); font-size: 1.2rem; font-weight: 300; color: #5a6a50; line-height: 1.6; margin-bottom: 16px; }
+  .k2-idea-text .strong { font-family: var(--serif-display); font-size: 1.3rem; color: #3d4a35; }
+
+  .k2-emotions { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 20px; }
+  .k2-emotion { padding: 6px 16px; border: 1px solid rgba(122,138,106,0.25); border-radius: 30px; font-size: 0.75rem; color: #7a8a6a; background: rgba(122,138,106,0.03); }
+
+  /* ===== K2 MOODBOARD — masonry grid ===== */
+  .k2-mood-grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-auto-rows: 80px;
+    gap: 8px;
+  }
+  .k2-mood-item {
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+  }
+  .k2-mood-item::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, transparent 65%, rgba(250,247,242,0.7) 100%);
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  .k2-mood-item:hover::after { opacity: 1; }
+  .k2-mood-label {
+    position: absolute;
+    bottom: 10px;
+    left: 12px;
+    z-index: 2;
+    font-size: 0.55rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #5a6a50;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  .k2-mood-item:hover .k2-mood-label { opacity: 1; }
+
+  /* K2 Grid placement */
+  .km2-1 { grid-column: 1 / 8; grid-row: 1 / 6; }
+  .km2-2 { grid-column: 8 / 13; grid-row: 1 / 4; }
+  .km2-3 { grid-column: 8 / 13; grid-row: 4 / 6; }
+  .km2-4 { grid-column: 1 / 5; grid-row: 6 / 9; }
+  .km2-5 { grid-column: 5 / 9; grid-row: 6 / 9; }
+  .km2-6 { grid-column: 9 / 13; grid-row: 6 / 9; }
+
+  .k2-palette { display: flex; gap: 3px; margin: 24px 0 32px; }
+  .k2-swatch { flex: 1; height: 56px; border-radius: 6px; position: relative; border: 1px solid rgba(0,0,0,0.04); }
+  .k2-swatch span { position: absolute; bottom: -18px; left: 0; font-size: 0.55rem; color: #aaa; }
+
+  .k2-names { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-bottom: 20px; }
+  .k2-name { background: #fff; border: 1px solid #ebe4d8; border-radius: 10px; padding: 20px 16px; text-align: center; transition: all 0.3s; }
+  .k2-name:hover { border-color: #7a8a6a; box-shadow: 0 4px 20px rgba(60,80,40,0.05); }
+  .k2-name.feat { border-color: #7a8a6a; background: linear-gradient(180deg, #fff, #f5f8f0); }
+  .k2-name-main { font-family: var(--serif-display); font-size: 1.3rem; color: #3d4a35; margin-bottom: 3px; }
+  .k2-name-sub { font-family: var(--serif); font-size: 0.8rem; font-style: italic; color: #7a8a6a; }
+
+  .k2-claims { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+  .k2-claim { background: #fff; border-left: 2px solid #7a8a6a; padding: 18px 22px; border-radius: 0 8px 8px 0; box-shadow: 0 2px 12px rgba(60,80,40,0.03); }
+  .k2-claim p { font-family: var(--serif); font-size: 1.05rem; font-style: italic; color: #5a6a50; }
+
+  .k2-packaging-img {
+    margin-top: 24px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.08);
+  }
+  .k2-packaging-img img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  /* ============================================= */
+  /* ===== KIERUNEK 3 ============================ */
+  /* ============================================= */
+
+  .k3-hero {
+    position: relative;
+    height: 90vh;
+    min-height: 550px;
+    display: flex;
+    align-items: flex-end;
+    overflow: hidden;
+  }
+  .k3-hero-bg {
+    position: absolute; inset: 0;
+    background: url('img/AdobeStock_1926337141.jpeg') center/cover;
+  }
+  .k3-hero-bg::after {
+    content: ''; position: absolute; inset: 0;
+    background: linear-gradient(180deg, rgba(244,239,230,0.0) 0%, rgba(244,239,230,0.4) 50%, rgba(244,239,230,0.97) 85%, #F4EFE6 100%);
+  }
+  .k3-hero-content { position: relative; z-index: 2; padding: 60px; max-width: 650px; }
+  .k3-hero-title { font-family: var(--lora); font-size: 4.2rem; font-weight: 600; color: #2E343D; line-height: 1.05; margin-bottom: 12px; }
+  .k3-hero-tagline { font-family: var(--lora); font-size: 1.2rem; font-weight: 400; font-style: italic; color: #D8A43A; }
+
+  .k3-section { background: #F4EFE6; padding: 44px 0; }
+  .k3-section + .k3-section { padding-top: 0; }
+  .k3-eyebrow { font-family: var(--sans); font-size: 0.55rem; letter-spacing: 4px; text-transform: uppercase; color: #D8A43A; margin-bottom: 10px; }
+  .k3-heading { font-family: var(--lora); font-size: 1.8rem; font-weight: 600; color: #2E343D; margin-bottom: 6px; }
+  .k3-lead { font-family: var(--lora); font-size: 1.05rem; font-weight: 400; font-style: italic; color: #6b7078; max-width: 540px; line-height: 1.5; margin-bottom: 32px; }
+
+  .k3-idea-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0; border-radius: 10px; overflow: hidden; box-shadow: 0 4px 40px rgba(46,52,61,0.06); }
+  .k3-idea-img { min-height: 400px; background-size: cover; background-position: center; }
+  .k3-idea-video { min-height: 400px; position: relative; overflow: hidden; }
+  .k3-idea-video video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+  .k3-idea-text { background: #fff; padding: 44px 40px; display: flex; flex-direction: column; justify-content: center; }
+  .k3-idea-text p { font-family: var(--lora); font-size: 1.15rem; font-weight: 400; color: #4a5058; line-height: 1.6; margin-bottom: 16px; }
+  .k3-idea-text .strong { font-family: var(--lora); font-size: 1.25rem; font-weight: 700; color: #2E343D; }
+
+  .k3-emotions { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 20px; }
+  .k3-emotion { padding: 6px 16px; border: 1px solid rgba(216,164,58,0.2); border-radius: 30px; font-size: 0.75rem; color: #D8A43A; background: rgba(216,164,58,0.03); }
+
+  /* K3 MOODBOARD */
+  .k3-mood-grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-auto-rows: 80px;
+    gap: 8px;
+  }
+  .k3-mood-item {
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+  }
+  .k3-mood-item::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, transparent 65%, rgba(244,239,230,0.7) 100%);
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  .k3-mood-item:hover::after { opacity: 1; }
+  .k3-mood-label {
+    position: absolute;
+    bottom: 10px;
+    left: 12px;
+    z-index: 2;
+    font-size: 0.55rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #4a5058;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  .k3-mood-item:hover .k3-mood-label { opacity: 1; }
+  .km3-1 { grid-column: 1 / 8; grid-row: 1 / 6; }
+  .km3-2 { grid-column: 8 / 13; grid-row: 1 / 4; }
+  .km3-3 { grid-column: 8 / 13; grid-row: 4 / 6; }
+  .km3-4 { grid-column: 1 / 5; grid-row: 6 / 9; }
+  .km3-5 { grid-column: 5 / 9; grid-row: 6 / 9; }
+  .km3-6 { grid-column: 9 / 13; grid-row: 6 / 9; }
+
+  /* K3 palette */
+  .k3-palette { display: flex; gap: 3px; margin: 24px 0 32px; }
+  .k3-swatch { flex: 1; height: 56px; border-radius: 6px; position: relative; border: 1px solid rgba(0,0,0,0.04); }
+  .k3-swatch span { position: absolute; bottom: -18px; left: 0; font-size: 0.55rem; color: #8a8e93; }
+
+  /* K3 names */
+  .k3-names { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-bottom: 20px; }
+  .k3-name { background: #fff; border: 1px solid rgba(216,164,58,0.1); border-radius: 10px; padding: 20px 16px; text-align: center; transition: all 0.3s; }
+  .k3-name:hover { border-color: #D8A43A; box-shadow: 0 4px 20px rgba(216,164,58,0.06); }
+  .k3-name.feat { border-color: #D8A43A; background: linear-gradient(180deg, #fff, #f6f1e8); }
+  .k3-name-main { font-family: var(--lora); font-size: 1.15rem; font-weight: 600; color: #2E343D; margin-bottom: 3px; }
+  .k3-name-sub { font-family: var(--lora); font-size: 0.8rem; font-style: italic; color: #6b7078; }
+
+  /* K3 claims */
+  .k3-claims { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+  .k3-claim { background: #fff; border-left: 2px solid #D8A43A; padding: 18px 22px; border-radius: 0 8px 8px 0; box-shadow: 0 2px 12px rgba(46,52,61,0.03); }
+  .k3-claim p { font-family: var(--lora); font-size: 1.05rem; font-style: italic; color: #4a5058; }
+
+  .k3-packaging-img {
+    margin-top: 24px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 8px 32px rgba(46,52,61,0.1);
+  }
+  .k3-packaging-img img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  /* ===== COMPARISON ===== */
+  .comparison { background: #0d0a07; padding: 44px 0; }
+  .comp-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 0; border-radius: 12px; overflow: hidden; margin-top: 32px; }
+  .comp-col { padding: 40px; }
+  .comp-col-dark { background: #141010; border-right: 1px solid rgba(196,160,96,0.08); }
+  .comp-col-light { background: #faf7f2; }
+  .comp-col-warm { background: #F4EFE6; }
+  .comp-col-title { font-size: 1.4rem; margin-bottom: 24px; padding-bottom: 16px; }
+  .comp-col-dark .comp-col-title { font-family: var(--bebas); color: #c4a060; letter-spacing: 3px; border-bottom: 1px solid rgba(196,160,96,0.15); }
+  .comp-col-light .comp-col-title { font-family: var(--serif-display); color: #3d4a35; border-bottom: 1px solid #ebe4d8; }
+  .comp-col-warm .comp-col-title { font-family: var(--lora); font-weight: 600; color: #2E343D; border-bottom: 1px solid rgba(216,164,58,0.15); }
+  .comp-row { display: flex; justify-content: space-between; padding: 10px 0; }
+  .comp-row + .comp-row { border-top: 1px solid rgba(255,255,255,0.03); }
+  .comp-col-light .comp-row + .comp-row { border-top: 1px solid #ebe4d8; }
+  .comp-key { font-size: 0.7rem; letter-spacing: 0.5px; font-weight: 500; }
+  .comp-col-dark .comp-key { color: #6b5a48; }
+  .comp-col-light .comp-key { color: #999; }
+  .comp-col-warm .comp-key { color: #8a8e93; }
+  .comp-val { font-size: 0.8rem; font-weight: 500; text-align: right; }
+  .comp-col-dark .comp-val { color: #e8dccf; }
+  .comp-col-light .comp-val { color: #3d4a35; }
+  .comp-col-warm .comp-val { color: #2E343D; }
+  .comp-col-warm .comp-row + .comp-row { border-top: 1px solid rgba(216,164,58,0.08); }
+
+  .footer { background: #0d0a07; padding: 48px 40px; text-align: center; border-top: 1px solid rgba(196,160,96,0.06); }
+  .footer-conf { font-size: 0.55rem; letter-spacing: 3px; text-transform: uppercase; color: #2c2420; margin-bottom: 20px; }
+  .footer-agency { display: flex; align-items: center; justify-content: center; gap: 10px; }
+  .footer-agency-text { font-size: 0.6rem; letter-spacing: 2px; color: #4a3f35; }
+  .footer-agency-logo { height: 18px; opacity: 0.5; transition: opacity 0.3s; }
+  .footer-agency-logo:hover { opacity: 0.8; }
+
+  /* ===== RESPONSIVE ===== */
+  @media (max-width: 800px) {
+    .opening-big { font-size: 3rem; }
+    .opening-dir-name-k1 { font-size: 1.5rem; }
+    .opening-dir-name-k2 { font-size: 1.4rem; }
+    .k1-hero-title { font-size: 3rem; }
+    .k2-hero-title { font-size: 2.6rem; }
+    .k3-hero-title { font-size: 2.8rem; }
+    .k1-idea-grid, .k2-idea-grid, .k3-idea-grid { grid-template-columns: 1fr; }
+    .k1-mood-grid, .k2-mood-grid, .k3-mood-grid {
+      grid-template-columns: 1fr 1fr;
+      grid-auto-rows: 140px;
+    }
+    .km-1, .km2-1, .km3-1 { grid-column: 1 / 3; grid-row: 1 / 3; }
+    .km-2, .km2-2, .km3-2 { grid-column: 1 / 2; grid-row: 3 / 5; }
+    .km-3, .km2-3, .km3-3 { grid-column: 2 / 3; grid-row: 3 / 5; }
+    .km-4, .km2-4, .km3-4 { grid-column: 1 / 2; grid-row: 5 / 7; }
+    .km-5, .km2-5, .km3-5 { grid-column: 2 / 3; grid-row: 5 / 7; }
+    .km-6, .km2-6, .km3-6 { grid-column: 1 / 3; grid-row: 7 / 9; }
+    .k1-names, .k2-names, .k3-names { grid-template-columns: repeat(3, 1fr); gap: 6px; }
+    .k1-name, .k2-name, .k3-name { padding: 12px 8px; }
+    .k1-name-main, .k2-name-main, .k3-name-main { font-size: 0.85rem; letter-spacing: 1px; }
+    .k1-name-sub, .k2-name-sub, .k3-name-sub { font-size: 0.6rem; }
+    .k1-claims, .k2-claims, .k3-claims { grid-template-columns: 1fr; }
+    .container { padding: 0 20px; }
+    .k1-hero-content, .k2-hero-content { padding: 40px 20px; }
+    .opening-two { flex-direction: column; gap: 20px; }
+    .opening-sep { width: 40px; height: 1px; }
+    .comp-grid { grid-template-columns: 1fr; }
+    .comp-col-dark { border-right: none; border-bottom: 1px solid rgba(196,160,96,0.08); }
+    .comp-col-light { border-bottom: 1px solid #ebe4d8; }
+
+    /* Tighter mobile spacing */
+    .k1-section, .k2-section, .k3-section { padding: 28px 0; }
+    .k1-hero, .k2-hero, .k3-hero { min-height: 50vh; }
+    .divider { padding: 18px 20px; }
+    .comparison { padding: 28px 0; }
+    .comp-col { padding: 24px 20px; }
+    .k1-heading, .k2-heading, .k3-heading { margin-bottom: 16px; }
+    .k1-mood-grid, .k2-mood-grid, .k3-mood-grid { grid-auto-rows: 120px; }
+    .k1-packaging-grid { grid-template-columns: 1fr; }
+
+    /* Hero zdjęcia — centruj esencję na mobile */
+    .k1-hero { height: 70vh; }
+    .k2-hero { height: 70vh; }
+    .k3-hero { height: 70vh; }
+    .k1-hero-bg { background-position: 60% center; }
+    .k2-hero-bg { background-position: center center; }
+    .k3-hero-bg { background-position: center center; }
+    .k1-hero-content, .k2-hero-content, .k3-hero-content { padding: 28px 20px; }
+    .k1-hero-title { font-size: 2.6rem; }
+    .k2-hero-title { font-size: 2.2rem; }
+    .k3-hero-title { font-size: 2.4rem; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ===== OPENING ===== -->
+<section class="opening">
+  <div class="opening-content">
+    <div class="opening-by">by AQQ</div>
+    <div class="opening-label">ROSOŁKI KOLAGENOWE</div>
+    <h1 class="opening-big">Kierunki <em>kreatywne</em></h1>
+    <div class="opening-two">
+      <div class="opening-dir">
+        <div class="opening-dir-num">Kierunek 01</div>
+        <div class="opening-dir-name-k1">SIŁA Z KOŚCI</div>
+      </div>
+      <div class="opening-sep"></div>
+      <div class="opening-dir">
+        <div class="opening-dir-num">Kierunek 02</div>
+        <div class="opening-dir-name-k2">Naturalna Apteka</div>
+      </div>
+      <div class="opening-sep"></div>
+      <div class="opening-dir">
+        <div class="opening-dir-num">Kierunek 03</div>
+        <div class="opening-dir-name-k3">Rosołek</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ===== BRIEF ===== -->
+<section class="k1-section" style="padding-top: 0;">
+  <div class="container" style="max-width: 700px;">
+    <div class="k1-eyebrow" style="text-align: center;">Produkt · Kontekst</div>
+    <h3 class="k1-heading" style="text-align: center; font-size: 1.6rem;">O CZYM MÓWIMY</h3>
+    <div style="margin-top: 28px; display: grid; grid-template-columns: 1fr 1fr; gap: 24px;">
+      <div style="background: #141010; border-radius: 10px; padding: 28px 24px; border: 1px solid rgba(196,160,96,0.08);">
+        <div style="font-family: var(--bebas); font-size: 0.9rem; letter-spacing: 3px; color: #c4a060; margin-bottom: 10px;">01 — Buliony kolagenowe</div>
+        <p style="font-family: var(--serif); font-size: 0.9rem; color: #8a7560; line-height: 1.6; font-style: italic;">Gotowane długo na kościach wołowych. Naturalnie bogate w kolagen. Siła natury, tradycja, regeneracja — coś, co stawia na nogi, odżywia i wzmacnia. Bez sztucznych dodatków.</p>
+        <div style="margin-top: 12px; font-family: var(--sans); font-size: 0.5rem; letter-spacing: 2px; text-transform: uppercase; color: #5c4a38;">Słoiki szklane</div>
+      </div>
+      <div style="background: #141010; border-radius: 10px; padding: 28px 24px; border: 1px solid rgba(196,160,96,0.08);">
+        <div style="font-family: var(--bebas); font-size: 0.9rem; letter-spacing: 3px; color: #c4a060; margin-bottom: 10px;">02 — Gotowe posiłki</div>
+        <p style="font-family: var(--serif); font-size: 0.9rem; color: #8a7560; line-height: 1.6; font-style: italic;">Pełnowartościowe dania na bazie bulionów kolagenowych. Wygodne, praktyczne — w podróż, do pracy, na camping. Zdrowe jedzenie, które możesz podać bliskiej osobie z czystym sumieniem.</p>
+        <div style="margin-top: 12px; font-family: var(--sans); font-size: 0.5rem; letter-spacing: 2px; text-transform: uppercase; color: #5c4a38;">Puszki &amp; słoiki</div>
+      </div>
+    </div>
+    <p style="text-align: center; margin-top: 20px; font-family: var(--sans); font-size: 0.55rem; letter-spacing: 3px; text-transform: uppercase; color: #3d2b1f;">Wizualnie spójne · Rozróżnialne · Naturalność · Regeneracja · Jakość</p>
+  </div>
+</section>
+
+
+<!-- ============================================= -->
+<!-- ===== KIERUNEK 1: SIŁA Z KOŚCI ============= -->
+<!-- ============================================= -->
+
+<!-- K1 HERO — parujący garnek na ogniu -->
+<section class="k1-hero" id="k1">
+  <div class="k1-hero-bg"></div>
+  <div class="k1-hero-content">
+    <div class="kierunek-label" style="color: #c4a060;">Kierunek 01</div>
+    <h2 class="k1-hero-title">SIŁA<br>Z KOŚCI</h2>
+    <p class="k1-hero-tagline">Regeneracja. Rdzeń. Naturalna moc.</p>
+  </div>
+</section>
+
+<!-- K1: Idea + Język wizualny (połączone) -->
+<section class="k1-section">
+  <div class="container">
+    <div class="k1-eyebrow">Idea przewodnia · Język wizualny</div>
+    <h3 class="k1-heading">POWRÓT DO PIERWOTNEJ SIŁY</h3>
+    <p class="k1-lead">Marka, która nie „udaje zdrowia" — tylko daje realne, odżywcze wsparcie. Ciemna. Surowa. Prawdziwa.</p>
+
+    <div class="k1-idea-grid">
+      <div class="k1-idea-video"><video autoplay muted loop playsinline src="img/hero-video.mp4"></video></div>
+      <div class="k1-idea-text">
+        <p>Długie gotowanie. Kości. Esencja. Czas.</p>
+        <p>Produkt, który stawia na nogi. Nie suplement. Nie moda.</p>
+        <div class="strong">FUNDAMENT.</div>
+        <div class="k1-emotions">
+          <span class="k1-emotion">bezpieczeństwo</span>
+          <span class="k1-emotion">ciepło</span>
+          <span class="k1-emotion">głęboka regeneracja</span>
+          <span class="k1-emotion">naturalna siła</span>
+          <span class="k1-emotion">autentyczność</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="k1-mood-grid" style="margin-top: 32px;">
+      <!-- Duży lewy — flat lay, garnek z kośćmi, warzywa dookoła -->
+      <div class="k1-mood-item km-1" style="background-image: url('img/AdobeStock_234113175_v2.jpeg');">
+        <span class="k1-mood-label">Składniki · Proces</span>
+      </div>
+      <!-- Prawy góra — kubek z bulionem, tymianek, intymny -->
+      <div class="k1-mood-item km-2" style="background-image: url('img/AdobeStock_1864758150.jpeg');">
+        <span class="k1-mood-label">Bulion · Esencja</span>
+      </div>
+      <!-- Prawy dół — słoiki z bulionem, produkt finalny -->
+      <div class="k1-mood-item km-3" style="background-image: url('img/AdobeStock_367161128.jpeg');">
+        <span class="k1-mood-label">Produkt · Słoiki</span>
+      </div>
+      <!-- Dolny lewy — kość w żeliwnym garnku -->
+      <div class="k1-mood-item km-4" style="background-image: url('img/AdobeStock_1257690087.jpeg');">
+        <span class="k1-mood-label">Kość · Surowość</span>
+      </div>
+      <!-- Dolny środek — rosół z kośćmi, rdzawe tło -->
+      <div class="k1-mood-item km-5" style="background-image: url('img/AdobeStock_169809158.jpeg');">
+        <span class="k1-mood-label">Rosół · Tradycja</span>
+      </div>
+      <!-- Dolny prawy — mięso w sosie -->
+      <div class="k1-mood-item km-6" style="background-image: url('img/AdobeStock_496041664.jpeg');">
+        <span class="k1-mood-label">Mięso · Głębia</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- K1: Paleta -->
+
+<section class="k1-section">
+  <div class="container">
+    <div class="k1-eyebrow">Paleta</div>
+    <div class="k1-palette">
+      <div class="k1-swatch" style="background: #1a1410;"><span>Ciepła czerń</span></div>
+      <div class="k1-swatch" style="background: #3d2b1f;"><span>Głęboki brąz</span></div>
+      <div class="k1-swatch" style="background: #8b6543;"><span>Kość</span></div>
+      <div class="k1-swatch" style="background: #c4a060;"><span>Bursztyn</span></div>
+      <div class="k1-swatch" style="background: #a0522d;"><span>Rdza</span></div>
+      <div class="k1-swatch" style="background: #2c3e2d;"><span>Butelk. zieleń</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- K1: Nazwy -->
+<section class="k1-section">
+  <div class="container">
+    <div class="k1-eyebrow">Propozycje nazw · Marka</div>
+    <div class="k1-names">
+      <div class="k1-name feat"><div class="k1-name-main">ESENCJA KOŚCI</div><div class="k1-name-sub">to, co najważniejsze — wyciąg</div></div>
+      <div class="k1-name feat"><div class="k1-name-main">BULION PIERWOTNY</div><div class="k1-name-sub">powrót do źródła, archetyp</div></div>
+      <div class="k1-name"><div class="k1-name-main">KOŚCIEC</div><div class="k1-name-sub">fundament ciała, struktura</div></div>
+    </div>
+
+    <div class="k1-eyebrow" style="margin-top: 24px;">Propozycje nazw · Buliony</div>
+    <div class="k1-names">
+      <div class="k1-name"><div class="k1-name-main">ODWAR</div><div class="k1-name-sub">tradycja, zielarstwo, głębia</div></div>
+      <div class="k1-name"><div class="k1-name-main">NAWAR</div><div class="k1-name-sub">esencja długiego gotowania</div></div>
+      <div class="k1-name"><div class="k1-name-main">ESENCJA KOŚCI — WOŁOWY</div><div class="k1-name-sub">klasyczny, głęboki smak</div></div>
+    </div>
+
+    <div class="k1-eyebrow" style="margin-top: 24px;">Gotowe dania</div>
+    <div class="k1-names">
+      <div class="k1-name"><div class="k1-name-main">SIŁA NA WYNOS</div><div class="k1-name-sub">mobilność, codzienność</div></div>
+      <div class="k1-name"><div class="k1-name-main">POWRÓT DO SIŁY</div><div class="k1-name-sub">regeneracja w drodze</div></div>
+      <div class="k1-name"><div class="k1-name-main">GOTOWE Z MOCY</div><div class="k1-name-sub">fundament w wygodnej formie</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- K1: Hasła -->
+<section class="k1-section">
+  <div class="container">
+    <div class="k1-eyebrow">Hasła komunikacyjne</div>
+    <div class="k1-claims">
+      <div class="k1-claim"><p>„Regeneracja zaczyna się od środka"</p></div>
+      <div class="k1-claim"><p>„Naturalnie stawia na nogi"</p></div>
+      <div class="k1-claim"><p>„Gotowany godzinami. Odżywia od pierwszej łyżki"</p></div>
+      <div class="k1-claim"><p>„Esencja, nie skrót"</p></div>
+    </div>
+  </div>
+</section>
+
+
+<!-- K1: Wizualizacja opakowania -->
+<section class="k1-section">
+  <div class="container">
+    <div class="k1-eyebrow">Wizualizacja opakowania</div>
+    <h3 class="k1-heading">WSTĘPNY ZARYS OPAKOWANIA</h3>
+    <p class="k1-lead">Proste w formie, surowe, minimalistyczne i eleganckie — ale konkretne. Szklany słoik, ciemna etykieta, czytelna typografia. Produkt mówi sam za siebie.</p>
+    <div class="k1-packaging-grid">
+      <div class="k1-packaging-img">
+        <img loading="lazy" src="img/k1-packaging-mockup.jpg" alt="Wizualizacja opakowania — wariant jasna etykieta">
+      </div>
+      <div class="k1-packaging-img">
+        <img loading="lazy" src="img/k1-packaging-mockup-2.jpg" alt="Wizualizacja opakowania — wariant ciemna etykieta, złoty nadruk">
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ===== DIVIDER ===== -->
+<section class="divider">
+  <p class="divider-text">Kierunek drugi</p>
+</section>
+
+
+<!-- ============================================= -->
+<!-- ===== KIERUNEK 2: NATURALNA APTEKA ========== -->
+<!-- ============================================= -->
+
+<section class="k2-hero" id="k2">
+  <div class="k2-hero-bg"></div>
+  <div class="k2-hero-content">
+    <div class="kierunek-label" style="color: #7a8a6a;">Kierunek 02</div>
+    <h2 class="k2-hero-title">Naturalna<br>Apteka</h2>
+    <p class="k2-hero-tagline">Ciepło. Wsparcie. Odbudowa.</p>
+  </div>
+</section>
+
+<!-- K2: Idea + Język wizualny (połączone) -->
+<section class="k2-section">
+  <div class="container">
+    <div class="k2-eyebrow">Idea przewodnia · Język wizualny</div>
+    <h3 class="k2-heading">Bulion jako naturalne wsparcie</h3>
+    <p class="k2-lead">Produkt, który możesz podać komuś bliskiemu — z pełnym spokojem. Jasny. Delikatny. Aptekarski.</p>
+
+    <div class="k2-idea-grid">
+      <div class="k2-idea-video"><video autoplay muted loop playsinline src="img/k2-hero-video.mp4"></video></div>
+      <div class="k2-idea-text">
+        <p>Delikatny, lekki, ale odżywczy. Tu siła nie jest agresywna.</p>
+        <p>Jest troskliwa.</p>
+        <div class="strong">Opieka w każdej łyżce.</div>
+        <div class="k2-emotions">
+          <span class="k2-emotion">opieka</span>
+          <span class="k2-emotion">ukojenie</span>
+          <span class="k2-emotion">rekonwalescencja</span>
+          <span class="k2-emotion">domowe ciepło</span>
+          <span class="k2-emotion">lekkość</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="k2-mood-grid" style="margin-top: 32px;">
+      <!-- Duży lewy — flat lay bulion z ziołami, białe deski -->
+      <div class="k2-mood-item km2-1" style="background-image: url('img/AdobeStock_1055728530.jpeg');">
+        <span class="k2-mood-label">Składniki · Naturalność</span>
+      </div>
+      <!-- Prawy góra — kobieta trzyma miseczkę, intymne -->
+      <div class="k2-mood-item km2-2" style="background-image: url('img/AdobeStock_1844750992.jpeg');">
+        <span class="k2-mood-label">Troska · Bliskość</span>
+      </div>
+      <!-- Prawy dół — bulion z góry, minimalistyczny -->
+      <div class="k2-mood-item km2-3" style="background-image: url('img/AdobeStock_1298118179.jpeg');">
+        <span class="k2-mood-label">Czystość · Esencja</span>
+      </div>
+      <!-- Dolny lewy — kubek z ziołami -->
+      <div class="k2-mood-item km2-4" style="background-image: url('img/AdobeStock_1600372758.jpeg');">
+        <span class="k2-mood-label">Zioła · Ciepło</span>
+      </div>
+      <!-- Dolny środek — szklanka z marchewką i ziołami -->
+      <div class="k2-mood-item km2-5" style="background-image: url('img/AdobeStock_1896419478.jpeg');">
+        <span class="k2-mood-label">Apteka · Rzemiosło</span>
+      </div>
+      <!-- Dolny prawy — ręce trzymające kubek -->
+      <div class="k2-mood-item km2-6" style="background-image: url('img/AdobeStock_1124149571.jpeg');">
+        <span class="k2-mood-label">Komfort · Domowe</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- K2: Paleta -->
+<section class="k2-section">
+  <div class="container">
+    <div class="k2-eyebrow">Paleta</div>
+    <div class="k2-palette">
+      <div class="k2-swatch" style="background: #faf7f2;"><span>Krem</span></div>
+      <div class="k2-swatch" style="background: #f0ebe0;"><span>Ciepła biel</span></div>
+      <div class="k2-swatch" style="background: #ddd5c5;"><span>Piaskowy</span></div>
+      <div class="k2-swatch" style="background: #7a8a6a;"><span>Szałwia</span></div>
+      <div class="k2-swatch" style="background: #5a6a50;"><span>Zieleń</span></div>
+      <div class="k2-swatch" style="background: #3d4a35;"><span>Ciemna zieleń</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- K2: Nazwy -->
+<section class="k2-section">
+  <div class="container">
+    <div class="k2-eyebrow">Propozycje nazw · Marka</div>
+    <div class="k2-names">
+      <div class="k2-name feat"><div class="k2-name-main">Esencja Zdrowia</div><div class="k2-name-sub">to, co najważniejsze</div></div>
+      <div class="k2-name"><div class="k2-name-main">Vita Rosół</div><div class="k2-name-sub">witalność, energia, zdrowie</div></div>
+      <div class="k2-name"><div class="k2-name-main">Naturum</div><div class="k2-name-sub">natura, premium, łacina</div></div>
+    </div>
+
+    <div class="k2-eyebrow" style="margin-top: 24px;">Propozycje nazw · Buliony</div>
+    <div class="k2-names">
+      <div class="k2-name"><div class="k2-name-main">Odnowa</div><div class="k2-name-sub">proces powrotu do zdrowia</div></div>
+      <div class="k2-name"><div class="k2-name-main">Pure Broth</div><div class="k2-name-sub">czystość, międzynarodowy ton</div></div>
+      <div class="k2-name"><div class="k2-name-main">Core Natural</div><div class="k2-name-sub">rdzeń, naturalność, fundament</div></div>
+    </div>
+
+    <div class="k2-eyebrow" style="margin-top: 24px;">Gotowe dania</div>
+    <div class="k2-names">
+      <div class="k2-name"><div class="k2-name-main">Naturalna Porcja</div><div class="k2-name-sub">naturalność, gotowe wsparcie</div></div>
+      <div class="k2-name"><div class="k2-name-main">Ciepło Gotowe</div><div class="k2-name-sub">komfort w wygodnej formie</div></div>
+      <div class="k2-name"><div class="k2-name-main">Źródło — Danie</div><div class="k2-name-sub">od esencji do posiłku</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- K2: Hasła -->
+<section class="k2-section">
+  <div class="container">
+    <div class="k2-eyebrow">Hasła komunikacyjne</div>
+    <div class="k2-claims">
+      <div class="k2-claim"><p>„Naturalne wsparcie organizmu"</p></div>
+      <div class="k2-claim"><p>„Dla tych, którzy potrzebują siły"</p></div>
+      <div class="k2-claim"><p>„Prosty skład. Prawdziwa wartość"</p></div>
+      <div class="k2-claim"><p>„Podaj z troską i czystym sumieniem"</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- K2: Wizualizacja opakowania -->
+<section class="k2-section">
+  <div class="container">
+    <div class="k2-eyebrow">Wizualizacja opakowania</div>
+    <h3 class="k2-heading">WSTĘPNY ZARYS OPAKOWANIA</h3>
+    <p class="k2-lead">Jasny, czysty, apteczny charakter. Szklany słoik z widocznym bulionem, kremowa etykieta z botaniczną ilustracją, delikatna typografia. Spokojny i wiarygodny — jak produkt z zielarni.</p>
+    <div class="k2-packaging-img">
+      <img loading="lazy" src="img/k2-packaging-mockup.jpg" alt="Wizualizacja opakowania — Regenerum, bulion wołowy na kościach">
+    </div>
+  </div>
+</section>
+
+
+<!-- ===== DIVIDER 2 ===== -->
+<section class="divider" style="background: #F4EFE6; border-top: 1px solid rgba(216,164,58,0.08); border-bottom: 1px solid rgba(216,164,58,0.08);">
+  <p class="divider-text" style="color: #6b7078;">Kierunek trzeci</p>
+</section>
+
+
+<!-- ============================================= -->
+<!-- ===== KIERUNEK 3: ROSÓŁEK =================== -->
+<!-- ============================================= -->
+
+<section class="k3-hero" id="k3">
+  <div class="k3-hero-bg"></div>
+  <div class="k3-hero-content">
+    <div class="kierunek-label" style="color: #D8A43A;">Kierunek 03</div>
+    <h2 class="k3-hero-title">Rosołek</h2>
+    <p class="k3-hero-tagline">Ciepło, które stawia na nogi.</p>
+  </div>
+</section>
+
+<!-- K3: Idea przewodnia · Język wizualny -->
+<section class="k3-section">
+  <div class="container">
+    <div class="k3-eyebrow">Idea przewodnia · Język wizualny</div>
+    <h3 class="k3-heading">To nie jest „bulion kolagenowy"</h3>
+    <p class="k3-lead">To jest rosołek — pachnie w całym domu, czeka w niedzielę na stole, stawiał na nogi. Ciepły. Swojski. Prawdziwy.</p>
+
+    <div class="k3-idea-grid">
+      <div class="k3-idea-video"><video autoplay muted loop playsinline src="img/k3-hero-video.mp4"></video></div>
+      <div class="k3-idea-text">
+        <p>Marka, która mówi: „Zrobiliśmy go tak, jak kiedyś. Tylko uczciwie."</p>
+        <p>Nie suplement. Nie trend. Rosołek.</p>
+        <div class="strong">Kierunek najbardziej ludzki i najbardziej masowy.</div>
+        <div class="k3-emotions">
+          <span class="k3-emotion">troska</span>
+          <span class="k3-emotion">bezpieczeństwo</span>
+          <span class="k3-emotion">dzieciństwo</span>
+          <span class="k3-emotion">niedzielny obiad</span>
+          <span class="k3-emotion">ciepło rodzinne</span>
+          <span class="k3-emotion">zaufanie</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="k3-mood-grid" style="margin-top: 32px;">
+      <!-- Duży lewy — ręce podające miskę rosołu, troska -->
+      <div class="k3-mood-item km3-1" style="background-image: url('img/AdobeStock_1923504200.jpeg');">
+        <span class="k3-mood-label">Troska · Podanie</span>
+      </div>
+      <!-- Prawy góra — szklana miska rosołu z parą -->
+      <div class="k3-mood-item km3-2" style="background-image: url('img/AdobeStock_1926337141.jpeg');">
+        <span class="k3-mood-label">Para · Esencja</span>
+      </div>
+      <!-- Prawy dół — rosół z góry, koperek, domowa miska -->
+      <div class="k3-mood-item km3-3" style="background-image: url('img/AdobeStock_1900949015.jpeg');">
+        <span class="k3-mood-label">Rosół · Domowy</span>
+      </div>
+      <!-- Dolny lewy — kobieta pod kocem z rosołem -->
+      <div class="k3-mood-item km3-4" style="background-image: url('img/AdobeStock_651510162.jpeg');">
+        <span class="k3-mood-label">Ukojenie · Ciepło</span>
+      </div>
+      <!-- Dolny środek — waza z rosołem, tradycja -->
+      <div class="k3-mood-item km3-5" style="background-image: url('img/AdobeStock_1886144894.jpeg');">
+        <span class="k3-mood-label">Waza · Tradycja</span>
+      </div>
+      <!-- Dolny prawy — parująca miska w ciepłej kuchni -->
+      <div class="k3-mood-item km3-6" style="background-image: url('img/AdobeStock_1571273417.jpeg');">
+        <span class="k3-mood-label">Kuchnia · Niedziela</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- K3: Paleta -->
+<section class="k3-section">
+  <div class="container">
+    <div class="k3-eyebrow">Paleta</div>
+    <div class="k3-palette">
+      <div class="k3-swatch" style="background: #F4EFE6;"><span>Krem porcelanowy</span></div>
+      <div class="k3-swatch" style="background: #D8A43A;"><span>Złoto rosołu</span></div>
+      <div class="k3-swatch" style="background: #9DAE9B;"><span>Ciepła szałwia</span></div>
+      <div class="k3-swatch" style="background: #2E343D;"><span>Przygaszony granat</span></div>
+      <div class="k3-swatch" style="background: #D9C8B4;"><span>Beż lniany</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- K3: Nazwy -->
+<section class="k3-section">
+  <div class="container">
+    <div class="k3-eyebrow">Propozycje nazw · Marka</div>
+    <div class="k3-names">
+      <div class="k3-name feat"><div class="k3-name-main">Rosołek</div><div class="k3-name-sub">proste, ciepłe, swojskie</div></div>
+      <div class="k3-name feat"><div class="k3-name-main">Domowy Rosołek</div><div class="k3-name-sub">domowe ciepło, tradycja</div></div>
+      <div class="k3-name"><div class="k3-name-main">Rosołek Prawdziwy</div><div class="k3-name-sub">autentyczność, jakość</div></div>
+    </div>
+
+    <div class="k3-eyebrow" style="margin-top: 24px;">Propozycje nazw · Buliony</div>
+    <div class="k3-names">
+      <div class="k3-name"><div class="k3-name-main">Rosołek Wołowy</div><div class="k3-name-sub">klasyczny smak</div></div>
+      <div class="k3-name"><div class="k3-name-main">Rosołek Na Kościach</div><div class="k3-name-sub">tradycyjny przepis</div></div>
+      <div class="k3-name"><div class="k3-name-main">Rosołek Esencja</div><div class="k3-name-sub">to, co najważniejsze</div></div>
+    </div>
+
+    <div class="k3-eyebrow" style="margin-top: 24px;">Gotowe dania</div>
+    <div class="k3-names">
+      <div class="k3-name"><div class="k3-name-main">Ciepło Na Wynos</div><div class="k3-name-sub">mobilność, codzienność</div></div>
+      <div class="k3-name"><div class="k3-name-main">Gotowe z Rdzenia</div><div class="k3-name-sub">fundament w wygodnej formie</div></div>
+      <div class="k3-name"><div class="k3-name-main">Naturalnie Gotowe</div><div class="k3-name-sub">uczciwy skład, bez kompromisów</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- K3: Hasła -->
+<section class="k3-section">
+  <div class="container">
+    <div class="k3-eyebrow">Hasła komunikacyjne</div>
+    <div class="k3-claims">
+      <div class="k3-claim"><p>„Rosołek, który stawia na nogi"</p></div>
+      <div class="k3-claim"><p>„Dom w jednej łyżce"</p></div>
+      <div class="k3-claim"><p>„Na przeziębienie. Na słabszy dzień. Na życie"</p></div>
+      <div class="k3-claim"><p>„Bo czasem trzeba wrócić do prostych rzeczy"</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- K3: Wizualizacja opakowania -->
+<section class="k3-section">
+  <div class="container">
+    <div class="k3-eyebrow">Wizualizacja opakowania</div>
+    <h3 class="k3-heading">WSTĘPNY ZARYS OPAKOWANIA</h3>
+    <p class="k3-lead">Ciepły, domowy, nostalgiczny. Słoik jak od babci — z drewnianą łyżką obok, na lnianej serwetce. Granatowa zakrętka, kraftowa etykieta, ręczna typografia. Dom w jednej łyżce.</p>
+    <div class="k3-packaging-img">
+      <img loading="lazy" src="img/k3-packaging-mockup.jpg" alt="Wizualizacja opakowania — Rosołek, wołowy na kościach">
+    </div>
+  </div>
+</section>
+
+
+<!-- ===== COMPARISON ===== -->
+<section class="comparison">
+  <div class="container">
+    <div class="k1-eyebrow">Podsumowanie</div>
+    <h3 class="k1-heading" style="margin-bottom: 8px;">RÓŻNICA STRATEGICZNA</h3>
+
+    <div class="comp-grid">
+      <div class="comp-col comp-col-dark">
+        <div class="comp-col-title">SIŁA Z KOŚCI</div>
+        <div class="comp-row"><span class="comp-key">Charakter</span><span class="comp-val">Mocna, surowa</span></div>
+        <div class="comp-row"><span class="comp-key">Dominanta</span><span class="comp-val">Głęboki brąz + czerń</span></div>
+        <div class="comp-row"><span class="comp-key">Archetyp</span><span class="comp-val">Fundament</span></div>
+        <div class="comp-row"><span class="comp-key">Odbiorca</span><span class="comp-val">Unisex / męski</span></div>
+        <div class="comp-row"><span class="comp-key">Ton</span><span class="comp-val">Premium, głęboki</span></div>
+        <div class="comp-row"><span class="comp-key">Sprzedaż</span><span class="comp-val">Online + zdrowa żywność</span></div>
+      </div>
+      <div class="comp-col comp-col-light">
+        <div class="comp-col-title">Naturalna Apteka</div>
+        <div class="comp-row"><span class="comp-key">Charakter</span><span class="comp-val">Delikatna, opiekuńcza</span></div>
+        <div class="comp-row"><span class="comp-key">Dominanta</span><span class="comp-val">Szałwia + krem</span></div>
+        <div class="comp-row"><span class="comp-key">Archetyp</span><span class="comp-val">Opieka</span></div>
+        <div class="comp-row"><span class="comp-key">Odbiorca</span><span class="comp-val">Rodzinny / kobiecy</span></div>
+        <div class="comp-row"><span class="comp-key">Ton</span><span class="comp-val">Ciepły, terapeutyczny</span></div>
+        <div class="comp-row"><span class="comp-key">Sprzedaż</span><span class="comp-val">Apteki, drogerie, retail</span></div>
+      </div>
+      <div class="comp-col comp-col-warm">
+        <div class="comp-col-title">Rosołek</div>
+        <div class="comp-row"><span class="comp-key">Charakter</span><span class="comp-val">Ciepła, swojska, ludzka</span></div>
+        <div class="comp-row"><span class="comp-key">Dominanta</span><span class="comp-val">Terrakota + krem</span></div>
+        <div class="comp-row"><span class="comp-key">Archetyp</span><span class="comp-val">Dom / Troska</span></div>
+        <div class="comp-row"><span class="comp-key">Odbiorca</span><span class="comp-val">Masowy / wszyscy</span></div>
+        <div class="comp-row"><span class="comp-key">Ton</span><span class="comp-val">Nostalgiczny, rodzinny</span></div>
+        <div class="comp-row"><span class="comp-key">Sprzedaż</span><span class="comp-val">Mass market, sieci, dyskonty</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="footer">
+  <p class="footer-conf">Confidential · First meeting material</p>
+  <div class="footer-agency">
+    <span class="footer-agency-text">Prepared by</span>
+    <a href="https://agencjaaqq.pl" target="_blank"><img class="footer-agency-logo" src="https://agencjaaqq.pl/wp-content/uploads/2023/01/logo-aqq.svg" alt="AQQ Creative Agency" onerror="this.outerHTML='<span style=\'font-family:Inter,sans-serif;font-size:0.75rem;font-weight:600;color:#c4a060;letter-spacing:2px;\'>AQQ</span>'"></a>
+  </div>
+</div>
+
+</body>
+</html>
