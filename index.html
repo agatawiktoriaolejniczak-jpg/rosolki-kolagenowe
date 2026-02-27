@@ -81,6 +81,9 @@
   .k1-hero-title { font-family: var(--bebas); font-size: 4.5rem; color: #f5ede3; line-height: 0.92; letter-spacing: 3px; margin-bottom: 12px; }
   .k1-hero-tagline { font-family: var(--serif); font-size: 1.2rem; font-weight: 300; font-style: italic; color: #c4a060; }
 
+  /* Brief grid */
+  .brief-grid { margin-top: 28px; display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+
   /* K1 sections */
   .k1-section { background: #0d0a07; padding: 44px 0; }
   .k1-section + .k1-section { padding-top: 0; }
@@ -452,57 +455,85 @@
 
   /* ===== RESPONSIVE ===== */
   @media (max-width: 800px) {
-    .opening-big { font-size: 3rem; }
-    .opening-dir-name-k1 { font-size: 1.5rem; }
-    .opening-dir-name-k2 { font-size: 1.4rem; }
-    .k1-hero-title { font-size: 3rem; }
-    .k2-hero-title { font-size: 2.6rem; }
-    .k3-hero-title { font-size: 2.8rem; }
-    .k1-idea-grid, .k2-idea-grid, .k3-idea-grid { grid-template-columns: 1fr; }
-    .k1-mood-grid, .k2-mood-grid, .k3-mood-grid {
-      grid-template-columns: 1fr 1fr;
-      grid-auto-rows: 140px;
-    }
-    .km-1, .km2-1, .km3-1 { grid-column: 1 / 3; grid-row: 1 / 3; }
-    .km-2, .km2-2, .km3-2 { grid-column: 1 / 2; grid-row: 3 / 5; }
-    .km-3, .km2-3, .km3-3 { grid-column: 2 / 3; grid-row: 3 / 5; }
-    .km-4, .km2-4, .km3-4 { grid-column: 1 / 2; grid-row: 5 / 7; }
-    .km-5, .km2-5, .km3-5 { grid-column: 2 / 3; grid-row: 5 / 7; }
-    .km-6, .km2-6, .km3-6 { grid-column: 1 / 3; grid-row: 7 / 9; }
-    .k1-names, .k2-names, .k3-names { grid-template-columns: repeat(3, 1fr); gap: 6px; }
-    .k1-name, .k2-name, .k3-name { padding: 12px 8px; }
-    .k1-name-main, .k2-name-main, .k3-name-main { font-size: 0.85rem; letter-spacing: 1px; }
-    .k1-name-sub, .k2-name-sub, .k3-name-sub { font-size: 0.6rem; }
-    .k1-claims, .k2-claims, .k3-claims { grid-template-columns: 1fr; }
-    .container { padding: 0 20px; }
-    .k1-hero-content, .k2-hero-content { padding: 40px 20px; }
-    .opening-two { flex-direction: column; gap: 20px; }
+    .container { padding: 0 16px; }
+
+    /* Opening */
+    .opening { padding: 48px 0 40px; }
+    .opening-big { font-size: 2.4rem; margin-bottom: 20px; }
+    .opening-dir-name-k1 { font-size: 1.3rem; }
+    .opening-dir-name-k2 { font-size: 1.2rem; }
+    .opening-dir-name-k3 { font-size: 1.2rem; }
+    .opening-two { flex-direction: column; gap: 16px; }
     .opening-sep { width: 40px; height: 1px; }
-    .comp-grid { grid-template-columns: 1fr; }
-    .comp-col-dark { border-right: none; border-bottom: 1px solid rgba(196,160,96,0.08); }
-    .comp-col-light { border-bottom: 1px solid #ebe4d8; }
 
-    /* Tighter mobile spacing */
-    .k1-section, .k2-section, .k3-section { padding: 28px 0; }
-    .k1-hero, .k2-hero, .k3-hero { min-height: 50vh; }
-    .divider { padding: 18px 20px; }
-    .comparison { padding: 28px 0; }
-    .comp-col { padding: 24px 20px; }
-    .k1-heading, .k2-heading, .k3-heading { margin-bottom: 16px; }
-    .k1-mood-grid, .k2-mood-grid, .k3-mood-grid { grid-auto-rows: 120px; }
-    .k1-packaging-grid { grid-template-columns: 1fr; }
+    /* Brief */
+    .brief-grid { grid-template-columns: 1fr; gap: 12px; }
 
-    /* Hero zdjęcia — centruj esencję na mobile */
-    .k1-hero { height: 70vh; }
-    .k2-hero { height: 70vh; }
-    .k3-hero { height: 70vh; }
+    /* Sections spacing */
+    .k1-section, .k2-section, .k3-section { padding: 20px 0; }
+    .divider { padding: 14px 16px; }
+    .comparison { padding: 20px 0; }
+    .k1-heading, .k2-heading, .k3-heading { margin-bottom: 12px; font-size: 1.6rem; }
+    .k1-lead, .k2-lead, .k3-lead { font-size: 0.9rem; margin-bottom: 20px; }
+
+    /* Hero */
+    .k1-hero, .k2-hero, .k3-hero { height: 60vh; min-height: 320px; }
     .k1-hero-bg { background-position: 60% center; }
     .k2-hero-bg { background-position: center center; }
     .k3-hero-bg { background-position: center center; }
-    .k1-hero-content, .k2-hero-content, .k3-hero-content { padding: 28px 20px; }
-    .k1-hero-title { font-size: 2.6rem; }
-    .k2-hero-title { font-size: 2.2rem; }
-    .k3-hero-title { font-size: 2.4rem; }
+    .k1-hero-content, .k2-hero-content, .k3-hero-content { padding: 20px 16px; }
+    .k1-hero-title { font-size: 2.4rem; }
+    .k2-hero-title { font-size: 2rem; }
+    .k3-hero-title { font-size: 2.2rem; }
+    .k1-hero-tagline, .k2-hero-tagline, .k3-hero-tagline { font-size: 1rem; }
+
+    /* Idea grid */
+    .k1-idea-grid, .k2-idea-grid, .k3-idea-grid { grid-template-columns: 1fr; }
+    .k1-idea-text, .k2-idea-text, .k3-idea-text { padding: 24px 16px; }
+    .k1-idea-text p, .k2-idea-text p, .k3-idea-text p { font-size: 1rem; }
+
+    /* Moodboard — simple 2-col, auto height, no fixed grid-row */
+    .k1-mood-grid, .k2-mood-grid, .k3-mood-grid {
+      grid-template-columns: 1fr 1fr;
+      grid-auto-rows: auto;
+      gap: 6px;
+    }
+    .k1-mood-item, .k2-mood-item, .k3-mood-item { aspect-ratio: 4/3; }
+    .km-1, .km2-1, .km3-1 { grid-column: 1 / 3; grid-row: auto; aspect-ratio: 16/9; }
+    .km-2, .km2-2, .km3-2 { grid-column: 1 / 2; grid-row: auto; }
+    .km-3, .km2-3, .km3-3 { grid-column: 2 / 3; grid-row: auto; }
+    .km-4, .km2-4, .km3-4 { grid-column: 1 / 2; grid-row: auto; }
+    .km-5, .km2-5, .km3-5 { grid-column: 2 / 3; grid-row: auto; }
+    .km-6, .km2-6, .km3-6 { grid-column: 1 / 3; grid-row: auto; aspect-ratio: 16/9; }
+
+    /* Palette */
+    .k1-palette, .k2-palette, .k3-palette { margin: 16px 0 24px; }
+    .k1-swatch, .k2-swatch, .k3-swatch { height: 40px; }
+    .k1-swatch span, .k2-swatch span, .k3-swatch span { font-size: 0.45rem; }
+
+    /* Names — 3 in a row */
+    .k1-names, .k2-names, .k3-names { grid-template-columns: repeat(3, 1fr); gap: 6px; }
+    .k1-name, .k2-name, .k3-name { padding: 10px 6px; border-radius: 6px; }
+    .k1-name-main, .k2-name-main, .k3-name-main { font-size: 0.75rem; letter-spacing: 1px; }
+    .k1-name-sub, .k2-name-sub, .k3-name-sub { font-size: 0.55rem; }
+
+    /* Claims */
+    .k1-claims, .k2-claims, .k3-claims { grid-template-columns: 1fr; gap: 6px; }
+    .k1-claim, .k2-claim, .k3-claim { padding: 12px 14px; }
+    .k1-claim p, .k2-claim p, .k3-claim p { font-size: 0.9rem; }
+
+    /* Packaging */
+    .k1-packaging-grid { grid-template-columns: 1fr; gap: 12px; }
+
+    /* Comparison */
+    .comp-grid { grid-template-columns: 1fr; }
+    .comp-col { padding: 20px 16px; }
+    .comp-col-dark { border-right: none; border-bottom: 1px solid rgba(196,160,96,0.08); }
+    .comp-col-light { border-bottom: 1px solid #ebe4d8; }
+    .comp-col-title { font-size: 1.2rem; }
+
+    /* Kierunek label */
+    .kierunek-label { font-size: 0.8rem; }
   }
 </style>
 </head>
@@ -539,7 +570,7 @@
   <div class="container" style="max-width: 700px;">
     <div class="k1-eyebrow" style="text-align: center;">Produkt · Kontekst</div>
     <h3 class="k1-heading" style="text-align: center; font-size: 1.6rem;">O CZYM MÓWIMY</h3>
-    <div style="margin-top: 28px; display: grid; grid-template-columns: 1fr 1fr; gap: 24px;">
+    <div class="brief-grid">
       <div style="background: #141010; border-radius: 10px; padding: 28px 24px; border: 1px solid rgba(196,160,96,0.08);">
         <div style="font-family: var(--bebas); font-size: 0.9rem; letter-spacing: 3px; color: #c4a060; margin-bottom: 10px;">01 — Buliony kolagenowe</div>
         <p style="font-family: var(--serif); font-size: 0.9rem; color: #8a7560; line-height: 1.6; font-style: italic;">Gotowane długo na kościach wołowych. Naturalnie bogate w kolagen. Siła natury, tradycja, regeneracja — coś, co stawia na nogi, odżywia i wzmacnia. Bez sztucznych dodatków.</p>
