@@ -296,8 +296,13 @@
   .k2-claim { background: #fff; border-left: 2px solid #7a8a6a; padding: 14px 22px; border-radius: 0 8px 8px 0; box-shadow: 0 2px 12px rgba(60,80,40,0.03); display: flex; align-items: center; }
   .k2-claim p { font-family: var(--serif); font-size: 1.05rem; font-style: italic; color: #5a6a50; }
 
-  .k2-packaging-img {
+  .k2-packaging-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
     margin-top: 24px;
+  }
+  .k2-packaging-img {
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 8px 32px rgba(0,0,0,0.08);
@@ -523,7 +528,7 @@
     .k1-claim p, .k2-claim p, .k3-claim p { font-size: 0.9rem; }
 
     /* Packaging */
-    .k1-packaging-grid { grid-template-columns: 1fr; gap: 12px; }
+    .k1-packaging-grid, .k2-packaging-grid { grid-template-columns: 1fr; gap: 12px; }
 
     /* Comparison */
     .comp-grid { grid-template-columns: 1fr; }
@@ -862,8 +867,13 @@
   <div class="container">
     <h3 class="k2-heading">WSTĘPNY ZARYS OPAKOWANIA</h3>
     <p class="k2-lead">Jasny, czysty, apteczny charakter. Szklany słoik z widocznym bulionem, kremowa etykieta z botaniczną ilustracją, delikatna typografia. Spokojny i wiarygodny — jak produkt z zielarni.</p>
-    <div class="k2-packaging-img">
-      <img loading="lazy" src="img/k2-packaging-mockup.jpg" alt="Wizualizacja opakowania — Regenerum, bulion wołowy na kościach">
+    <div class="k2-packaging-grid">
+      <div class="k2-packaging-img">
+        <img loading="lazy" src="img/k2-packaging-mockup.jpg" alt="Regenerum — pojedynczy słoik">
+      </div>
+      <div class="k2-packaging-img">
+        <img loading="lazy" src="img/k2-packaging-mockup-2.jpg" alt="Linia produktów — Vita Rosół, Pure Broth, Naturalna Porcja">
+      </div>
     </div>
   </div>
 </section>
